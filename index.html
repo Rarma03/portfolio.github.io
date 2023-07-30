@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gradient_circle.css">
+    <link rel="stylesheet" href="css/typewriter.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .gradient-circle {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow),
+      linear-gradient(#262626, #141414);
+    animation: rotate 8s linear infinite;
+  }
+  
+  .gradient-circle:before,
+  .gradient-circle:after {
+    content: " ";
+    position: absolute;
+    inset: 8px;
+    background: linear-gradient(#161616, #262626);
+    border-radius: inherit;
+  }
+  
+  .gradient-circle:before {
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow);
+    filter: blur(32px);
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@300&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+/* scroll bar properties  */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: black;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: red;
+    border-radius: 10px;
+    height: 10px;
+}
+/* header  */
+header{
+    background-color: black;
+    height: 5vh;
+    position: sticky;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95vw;
+    list-style: none;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+nav ul a li{
+    cursor: pointer;
+    padding: 5px;
+}
+nav ul a li:hover{
+    text-decoration:overline;
+}
+nav img{
+    display: none;
+}
+@media screen and (max-width:768px){
+    header{
+        height: fit-content;
+    }
+    nav ul{
+        display: none;
+        text-align: right;
+    }
+    nav img{
+        padding: 5px;
+        display: block;
+        background-color: white;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width:768px){
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 95vw;
+        list-style: none;
+    }    
+}
+
+/* zero - contact section through mail  */
+.zero{
+    display: flex;
+    justify-content: center;
+    visibility: hidden; 
+    width: 99vw;
+    height: 95vh;
+    position: absolute;
+}
+.zero .contact{
+    z-index: 1;
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+.contact h1,.contact h3{
+    text-align: center;
+}
+.form{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+.form-buttons input{
+    outline: none;
+    border: none;
+}
+/* main  */
+main{
+    background: url(/Media/bg/modern-futuristic-sci-fi-background.jpg) ;
+    background-size: 100vw 95vh;
+    background-repeat: no-repeat;
+    height: 95vh;
+    overflow-y: auto;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 180px 50px;
+}
+#rjimg{
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+.top-of-eachother{
+    position: absolute;
+}
+.text{
+    text-align: center;
+    color: white;
+    width: fit-content;
+}
+.white-line-vertical{
+    background-color: white;
+    height: 30vh;
+    max-height: 35vh;
+    width: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.white-line-horizontal{
+    display: none;
+}
+@media screen and (max-width:843px){
+    .white-line-vertical{
+        display: none;
+    }    
+    .white-line-horizontal{
+        display: block;
+        background-color: white;
+        height: 3px;
+        min-width: 45vw;
+        width: 45vw;
+        margin: 20px 30px;
+    }
+    .text h1,.text h3,.text span{
+        font-size: 20px;
+    }
+    .first{        
+        padding: 120px 50px;
+    }
+    /* nav bar  */
+
+}
+/* second  */
+.second{
+    width: 99vw;
+    height: fit-content;
+    background-color: black;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+.language-cards,.design-cards{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
+    align-items: center;
+}
+.card{
+    height: 206px;
+    width: 180px;
+    background: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: -2px 1px 16px cyan;
+}
+.card h3{
+    text-align: center;
+}
+.card .img-box img{
+    height: 170px;
+    width: 180px;
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+}
+.card:hover{
+    height: 210px;
+    width: 183px;
+}
+.design-head,.dev-head{
+    background: white;
+    color: black;
+    margin: 5px;
+    text-align: center;
+    text-shadow: -2px -1px 5px black;
+}
+@media screen and (max-width:768px){
+    .second{
+        height: fit-content;
+    }
+    .card{
+        height: 206px;
+        width: 180px;
+        background: white;
+        border-radius: 10px;
+        margin: 10px;
+    }    
+    .card .img-box img{
+        height: 170px;
+        width: 180px;
+    }
+}
+
+/* third - project related part  */
+.third{
+    width: 99vw;
+    height: fit-content;
+    background-color: transparent;
+    padding: 120px 80px;
+    box-sizing: border-box;
+}
+.third-main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.third h1,.second h1{
+    color: white;
+    text-align: center;
+    font-size: 10vw;
+    text-decoration: overline;
+    padding: 20px;
+}
+.third-main .project-card{
+    width: 50vw;
+    height: fit-content;
+    background-color: white;
+    margin: 5px;
+}
+.project-card:hover{
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.project-card h2{
+    word-wrap: break-word;
+    padding: 15px 8px;
+}
+
+@media screen and (max-width:768px) {
+    .third h1,.second h1{        
+        font-size: 10vw;
+    }
+        
+}
+
+
+
+/* footer  */
+footer{
+    background-color: black;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+}
+.contact-info{
+    color: white;    
+    font-size: 16px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.contact-info h4,a{
+    font-family: 'Roboto Mono', monospace;
+}
+.mail a{
+    color: white;
+    text-decoration: none;
+}
+.sites a img{
+    width: 25px;
+}
+.copyright{
+    text-align: left;
+    font-size: 13px;
+    font-weight: 100;
+    padding-top: 10px;
+}
+@media screen and (max-width:768px){
+    .contact-info{
+        font-size: 10px;
+    }
+}
+.txt{
+    position: relative;
+    color: violet;
+    font-size: 30px;
+}
+.txt-sec:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid chartreuse;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="ham_icon" onclick="show_items()" src="./Media/hamburger.png" alt="">
+            <ul id="ham_items">
+            <a href="#first"><li>Home</li></a>
+            <a href="#second"><li>Skill</li></a>
+            <a href="#third"><li>Projects</li></a>
+            <a href="https://drive.google.com/file/d/1UQsV-X0hY9zCEMnC231VMc36OaBko3zX/view?usp=sharing"><li>Resume</li></a>
+            <a onclick="show_contact_form()"><li>Contact</li></a>
+        </ul></nav>
+    </header>
+    <main>
+        <!-- contact through mail -->
+        <div class="zero" id="zero">
+            <div class="contact">
+                <h1>Have Any Query ?</h1>
+                <h3>Feel Free to reach me 😄</h3>
+                <form action="" class="form">
+                    <span class="form-buttons">
+                        <input type="text" id="fname" placeholder="Enter Your First Name" >
+                        <input type="text" id="lname" placeholder="Enter Your Last Name" >
+                    </span>
+                    <span class="form-buttons">
+                        <input type="text" id="mail" placeholder="Enter Your E-mail">
+                    </span>
+                    <span class="form-buttons">
+                        <!-- <input type="text" id="message" placeholder="Enter Your Message"> -->
+                        <textarea id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                    </span>
+                    <span>
+                        <label for="anoy">Do you want to be anonymous : </label>
+                        <input type="checkbox" name="" id="">
+                    </span>
+                    <span class="form-buttons">
+                        <input type="submit" id="mail" placeholder="Enter Your E-mail">
+                    </span>
+                </form>
+            </div>
+        </div>
+        <!-- image and in-text  -->
+        <div class="first" id="first">
+            <div class="hh">
+                <!-- <img src="rajimage.png" alt="" id="rjimg" class="top-of-eachother"> -->
+                <div class="gradient-circle top-of-eachother"></div>
+            </div>
+            <div class="white-line-vertical"></div>
+            <div class="white-line-horizontal"></div>
+            <div class="text">
+                <h1>Hello,</h1>
+                <h3>My Name is Raj Verma</h3>
+                <h3>I am a</h3>
+                <span class="txt txt-sec">Web-Developer</span>
+            </div>
+        </div>
+        <!-- skills -->
+        <div class="second" id="second">
+            <h1>Skill</h1>
+            <div class="dev-head">
+                <h2>Development Tools</h2>
+            </div>
+            <div class="language-cards">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (5).png" alt="">
+                    </div>
+                    <h3>C++ Language</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (6).png" alt="">
+                    </div>
+                    <h3>C Language</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (4).png" alt="">
+                    </div>
+                    <h3>Java</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (1).png" alt="">
+                    </div>
+                    <h3>Html</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (2).png" alt="">
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (3).png" alt="">
+                    </div>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com.png" alt="">
+                    </div>
+                    <h3>React</h3>
+                </div>
+            </div>
+            <div class="design-head">
+                <h2>Design Tools</h2>
+            </div>
+            <div class="design-cards">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (7).png" alt="">
+                    </div>
+                    <h3>Figma</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (8).png" alt="">
+                    </div>
+                    <h3>Canva</h3>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="/Media/Techskill/pngwing.com (9).png" alt="">
+                    </div>
+                    <h3>Adobe Illustrator</h3>
+                </div>
+            </div>
+        </div>
+        <!-- projects  -->
+        <div class="third" id="third">
+            <h1>Projects</h1>
+            <div class="third-main">
+                <div class="project-card">
+                    <h2>StarGaze</h2>
+                </div>
+                <div class="project-card">
+                    <h2>Calculator</h2>
+                </div>
+                <div class="project-card">                    
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="project-card">                    
+                    <h2>CloudNine</h2>
+                </div>
+                <div class="project-card">                    
+                    <h2>QuickPay</h2>
+                </div>
+                <div class="project-card">                    
+                    <h2>PickYour-Pic</h2>
+                </div>
+            </div>
+        </div>
+    <!-- other details      -->
+    <footer>
+        <div class="contact-info">
+            <div class="phone">
+                <h2>Phone</h2>
+                <h4>+91 62xx93XX03</h4>
+            </div>
+            <div class="mail">                
+                <h2>Email</h2>
+                <h4><a href="mailto::raj0701verma@gmail.com">raj0701verma@gmail.com</a></h4>
+            </div>
+            <div class="social-media">                
+                <h2>Follow Me</h2>
+                <div class="sites">
+                    <a href=""><img src="/Media/images-social/linkedin.png" alt=""></a>
+                    <a href=""><img src="/Media/images-social/instagram.png" alt=""></a>
+                    <a href=""><img src="/Media/images-social/github (1).png" alt=""></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <h4>&copy; 2030 By Raj Verma.</h4>
+                <h4>Powered and secured by RajComs</h4>
+            </div>
+        </div>
+    </footer>
+</main>
+<script src="/javascript/index.js"></script>
+<script src="/javascript/typewriter.js"></script>
+<script>
+    let zero = document.getElementById("zero");
+
+const show_contact_form = () => {
+    if (zero.style.visibility == "visible") {
+        zero.style.visibility = "hidden";
+    }
+    else {
+        zero.style.visibility = "visible";
+    }
+}
+
+const hide_contact_form = () => {
+    zero.style.visibility = "hidden";
+}
+
+//hamburger menu bar
+let ham_items = document.getElementById('ham_items');
+let ham_icon = document.getElementById("ham_icon");
+
+const show_items = () => {
+    if (ham_items.style.display == "block") {
+        ham_items.style.display = "none";
+    }
+    else {
+        ham_items.style.display = "block";
+    }
+}
+const txt = document.querySelector(".txt-sec");
+
+const textLoad = () => {
+    setTimeout(() => {
+        txt.textContent = "Web-Developer";
+    }, 0);
+    setTimeout(() => {
+        txt.textContent = "Graphic Designer";
+    }, 4000);
+    setTimeout(() => {
+        txt.textContent = "Front-End";
+    }, 8000);
+}
+
+textLoad();
+setInterval(textLoad, 12000);
+</script>
+</body>
+</html>
