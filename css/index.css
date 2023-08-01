@@ -65,6 +65,7 @@ nav img:hover{
         text-align: right;        
     }
     nav img{
+        position:fixed;
         margin: 10px;
         padding: 5px;
         display: block;
